@@ -1,6 +1,6 @@
 describe("BlinkyDancer", function() {
 
-  var linkyDancer;
+  var blinkyDancer;
   var timeBetweenSteps = 100;
   var clock;
 
@@ -75,7 +75,7 @@ describe("FadedDancer", function() {
 
 describe("SchizoDancer", function() {
 
-  var linkyDancer;
+  var schizoDancer;
   var timeBetweenSteps = 100;
   var clock;
 
@@ -89,10 +89,10 @@ describe("SchizoDancer", function() {
   });
 
   it("should have a step function that makes its node be schizophrenic", function() {
-    sinon.spy(schizoDancer.$node, 'toggle');
+    sinon.spy(schizoDancer.$node, 'fadeToggle');
     sinon.spy(schizoDancer.$node, 'toggleClass');
     schizoDancer.step();
-    expect(schizoDancer.$node.toggle.called).to.be.true;
+    expect(schizoDancer.$node.fadeToggle.called).to.be.true;
     expect(schizoDancer.$node.toggleClass.called).to.be.true;
   });
 
@@ -110,4 +110,30 @@ describe("SchizoDancer", function() {
       expect(schizoDancer.step.callCount).to.be.equal(2);
     });
   });
+});
+
+describe("Line Up", function() {
+  var timeBetweenSteps = 100,
+      dancer,
+      blinkyDancer,
+      fadedDancer,
+      schizoDancer,
+      colorChangeDancer;
+
+  beforeEach(function() {
+    dancer = new Dancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
+    fadedDancer = new FadedDancer(10, 20, timeBetweenSteps);
+    schizoDancer = new SchizoDancer(10, 20, timeBetweenSteps);
+    colorChangeDancer = new ColorChangeDancer(10, 20, timeBetweenSteps);
+  });
+
+  describe("dancer array", function() {
+    it("should have an array of dancers", function() {
+      console.log($('.addDancerButton'));
+    $('.addDancerButton').trigger('click');
+      expect(window.dancers.length > 0).to.be.true;
+    });
+  });
+
 });

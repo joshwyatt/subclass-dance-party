@@ -1,6 +1,6 @@
 var SchizoDancer = function(top, left, timeBetweenSteps){
 
-  BlinkyDancer.call(this, top, left, timeBetweenSteps);
+  FadedDancer.call(this, top, left, timeBetweenSteps);
   // this.oldStep = this.step;
   // this.step = function(){
   //   this.oldStep();
@@ -10,9 +10,9 @@ var SchizoDancer = function(top, left, timeBetweenSteps){
   // };
 };
 
-SchizoDancer.prototype = Object.create(BlinkyDancer.prototype);
+SchizoDancer.prototype = Object.create(FadedDancer.prototype);
 SchizoDancer.prototype.constructor = SchizoDancer;
 SchizoDancer.prototype.step = function(){
-  BlinkyDancer.prototype.step.call(this);
+  FadedDancer.prototype.step.call(this);
   this.$node.toggleClass('schizo');
 };

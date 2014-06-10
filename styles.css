@@ -33,3 +33,9 @@ body, a:link, a:visited, a:active{
 .schizo{
   border-radius: 0px !important;
 }
+
+.colorChange {
+  border: 50px solid blue;
+}
+
+
