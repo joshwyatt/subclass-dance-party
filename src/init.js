@@ -38,5 +38,11 @@ $(document).ready(function(){
     }
   });
 
+  $(".switchPartnerButton").on('click', function(event){
+    for (var i = 0; i < dancers.length; i++){
+      dancers[i].moveToward();
+    }
+  });
+
 });
 
