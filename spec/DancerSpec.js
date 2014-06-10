@@ -90,10 +90,10 @@ describe("SchizoDancer", function() {
 
   it("should have a step function that makes its node be schizophrenic", function() {
     sinon.spy(schizoDancer.$node, 'toggle');
-    sinon.spy(schizoDancer.$node, '');
+    sinon.spy(schizoDancer.$node, 'toggleClass');
     schizoDancer.step();
     expect(schizoDancer.$node.toggle.called).to.be.true;
-    expect(schizoDancer.$node.toggle.called).to.be.true;
+    expect(schizoDancer.$node.toggleClass.called).to.be.true;
   });
 
   describe("dance", function(){
