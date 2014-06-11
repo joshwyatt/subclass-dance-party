@@ -35,7 +35,7 @@ Dancer.prototype.setPosition = function(top, left){
 };
 
 Dancer.prototype.lineUp = function(){
-  this.setPosition('95%');
+  this.setPosition('45%');
 };
 
 Dancer.prototype.findClosestNeighbor = function(){

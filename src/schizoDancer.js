@@ -21,8 +21,8 @@ SchizoDancer.prototype.moveToward = function() {
   var directions = [
     {top: '5%', left: 0},
     {top: '5%', left: '90%'},
-    {top: '90%', left: 0},
-    {top: '90%', left: '90%'}
+    {top: '45%', left: 0},
+    {top: '45%', left: '90%'}
   ];
 
   this.$node.animate(
